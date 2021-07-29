@@ -1,0 +1,21 @@
+ALGORITHM card
+
+VAR
+    i, j,C: INTEGER;
+    TAB : ARRAY_OF INTEGER[54];
+
+BEGIN
+    for i from 0 to TAB.length-1 step 1 DO 
+      read TAB[i]
+    End for 
+    read (C)
+    TAB[i]:= C
+    for i from 0 to TAB.length-1 step 1 DO
+       for j from i+1 to TAB.length-1 step 1 DO
+         if (C<= TAB[j] ) then  ( TAB[j+1] := TAB[j] and TAB[j]:= C )
+         break 
+         End if 
+        End for 
+    End for 
+
+END
